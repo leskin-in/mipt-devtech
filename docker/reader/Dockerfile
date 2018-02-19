@@ -1,9 +1,11 @@
 FROM python:latest
 
-ADD ./requirements.txt requirements.txt
-ADD ./reader.py reader.py
+ADD . /reader
+
+WORKDIR /reader
 
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install pika
 
-ENTRYPOINT ["reader.py", ""]
+ENTRYPOINT ["python3", "reader.py"]
+

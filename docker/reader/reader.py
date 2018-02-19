@@ -1,13 +1,27 @@
 #!/usr/bin/env python3
 
-import os
+import pika
+
+
+Q_NAME = 'mongo'
+
 
 def main():
-    receive_ip = os.environ.get("RECV_IP")
-    receive_port = int(os.environ.get("RECV_PORT"))
-    if (receive_ip is None) or (receive_port is None):
-        raise Exception("IP address was not provided")
-
+    bc = pika.BlockingConnection()
+    # bc = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
+    channel = bc.channel()
+    channel.queue_declare(queue=Q_NAME)
+    
     while True:
-        message = input("MSG: ")
+        try:
+            message = input("MSG: ")
+            channel.basic_publish('', Q_NAME, message)
+            print("Message sent")
+        except KeyboardInterrupt:
+            bc.close()
+			print()
+            exit(0)
 
+
+if (__name__ == '__main__'):
+    main()

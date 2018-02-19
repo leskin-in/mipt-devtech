@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  rabbitmq:
+    image: rabbitmq:latest
+    networks:
+      - storage
+    ports:
+      - 127.0.0.1:5672:5672
+
+  mongodb:
+    image: mongo:latest
+    networks:
+      - storage
+    volumes:
+      - mongostorage:/data/db
+
+  receiver:
+    build: .
+    depends_on:
+      - mongodb
+      - rabbitmq
+    networks:
+      - storage
+
+networks:
+  storage:
+
+volumes:
+  mongostorage:

@@ -1,0 +1,112 @@
+Recreating rabbitrecv ... 
+Starting storage_mongodb_1 ... 
+[1A[2KStarting storage_mongodb_1 ... [32mdone[0m[1B[1A[2KRecreating rabbitrecv ... [32mdone[0m[1BRecreating storage_receiver_1 ... 
+[1A[2KRecreating storage_receiver_1 ... [32mdone[0m[1BAttaching to storage_mongodb_1, storage_rabbitmq_1, storage_receiver_1
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.988+0000 I CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=074f552a7957
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.989+0000 I CONTROL  [initandlisten] db version v3.6.2
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.989+0000 I CONTROL  [initandlisten] git version: 489d177dbd0f0420a8ca04d39fd78d0a2c539420
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.989+0000 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1t  3 May 2016
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.989+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.989+0000 I CONTROL  [initandlisten] modules: none
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.989+0000 I CONTROL  [initandlisten] build environment:
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.989+0000 I CONTROL  [initandlisten]     distmod: debian81
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.989+0000 I CONTROL  [initandlisten]     distarch: x86_64
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.989+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.989+0000 I CONTROL  [initandlisten] options: { net: { bindIpAll: true } }
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.990+0000 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.990+0000 I STORAGE  [initandlisten] 
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.993+0000 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.993+0000 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+[36mmongodb_1   |[0m 2018-02-19T23:36:34.993+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3417M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+[36mmongodb_1   |[0m 2018-02-19T23:36:35.620+0000 I STORAGE  [initandlisten] WiredTiger message [1519083395:620362][1:0x7f4e11aeca00], txn-recover: Main recovery loop: starting at 21/6656
+[36mmongodb_1   |[0m 2018-02-19T23:36:36.365+0000 I STORAGE  [initandlisten] WiredTiger message [1519083396:365131][1:0x7f4e11aeca00], txn-recover: Recovering log 21 through 22
+[36mmongodb_1   |[0m 2018-02-19T23:36:36.938+0000 I STORAGE  [initandlisten] WiredTiger message [1519083396:938048][1:0x7f4e11aeca00], txn-recover: Recovering log 22 through 22
+[36mmongodb_1   |[0m 2018-02-19T23:36:37.616+0000 I CONTROL  [initandlisten] 
+[36mmongodb_1   |[0m 2018-02-19T23:36:37.616+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+[36mmongodb_1   |[0m 2018-02-19T23:36:37.616+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+[36mmongodb_1   |[0m 2018-02-19T23:36:37.616+0000 I CONTROL  [initandlisten] 
+[36mmongodb_1   |[0m 2018-02-19T23:36:37.689+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+[36mmongodb_1   |[0m 2018-02-19T23:36:37.690+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:50.016 [info] <0.33.0> Application lager started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:50.650 [info] <0.33.0> Application crypto started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:50.879 [info] <0.33.0> Application mnesia started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:50.879 [info] <0.33.0> Application xmerl started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:50.904 [info] <0.33.0> Application os_mon started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.058 [info] <0.33.0> Application inets started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.058 [info] <0.33.0> Application recon started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.059 [info] <0.33.0> Application asn1 started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.059 [info] <0.33.0> Application public_key started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.201 [info] <0.33.0> Application ssl started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.213 [info] <0.33.0> Application ranch started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.214 [info] <0.33.0> Application ranch_proxy_protocol started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.214 [info] <0.33.0> Application jsx started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.214 [info] <0.33.0> Application rabbit_common started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.240 [info] <0.183.0> 
+[33mrabbitmq_1  |[0m  Starting RabbitMQ 3.7.3 on Erlang 20.2.2
+[33mrabbitmq_1  |[0m  Copyright (C) 2007-2018 Pivotal Software, Inc.
+[33mrabbitmq_1  |[0m  Licensed under the MPL.  See http://www.rabbitmq.com/
+[33mrabbitmq_1  |[0m 
+[33mrabbitmq_1  |[0m   ##  ##
+[33mrabbitmq_1  |[0m   ##  ##      RabbitMQ 3.7.3. Copyright (C) 2007-2018 Pivotal Software, Inc.
+[33mrabbitmq_1  |[0m   ##########  Licensed under the MPL.  See http://www.rabbitmq.com/
+[33mrabbitmq_1  |[0m   ######  ##
+[33mrabbitmq_1  |[0m   ##########  Logs: <stdout>
+[33mrabbitmq_1  |[0m 
+[33mrabbitmq_1  |[0m               Starting broker...
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:51.282 [info] <0.183.0> 
+[33mrabbitmq_1  |[0m  node           : rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m  home dir       : /var/lib/rabbitmq
+[33mrabbitmq_1  |[0m  config file(s) : /etc/rabbitmq/rabbitmq.conf
+[33mrabbitmq_1  |[0m  cookie hash    : EBWE9UNXnU9iWG2qy0m9+Q==
+[33mrabbitmq_1  |[0m  log(s)         : <stdout>
+[33mrabbitmq_1  |[0m  database dir   : /var/lib/rabbitmq/mnesia/rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.155 [info] <0.191.0> Memory high watermark set to 3143 MiB (3296473907 bytes) of 7859 MiB (8241184768 bytes) total
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.177 [info] <0.193.0> Enabling free disk space monitoring
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.177 [info] <0.193.0> Disk free limit set to 50MB
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.188 [info] <0.195.0> Limiting to approx 1048476 file handles (943626 sockets)
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.189 [info] <0.196.0> FHC read buffering:  OFF
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.189 [info] <0.196.0> FHC write buffering: ON
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.197 [info] <0.183.0> Node database directory at /var/lib/rabbitmq/mnesia/rabbit@1758dd8ded5d is empty. Assuming we need to join an existing cluster or initialise from scratch...
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.198 [info] <0.183.0> Configured peer discovery backend: rabbit_peer_discovery_classic_config
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.198 [info] <0.183.0> Will try to lock with peer discovery backend rabbit_peer_discovery_classic_config
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.198 [info] <0.183.0> Peer discovery backend rabbit_peer_discovery_classic_config does not support registration, skipping randomized startup delay.
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.198 [info] <0.183.0> All discovered existing cluster peers: 
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.198 [info] <0.183.0> Discovered no peer nodes to cluster with
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.204 [info] <0.33.0> Application mnesia exited with reason: stopped
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.468 [info] <0.33.0> Application mnesia started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:55.975 [info] <0.183.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.025 [info] <0.183.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.102 [info] <0.183.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.102 [info] <0.183.0> Peer discovery backend rabbit_peer_discovery_classic_config does not support registration, skipping registration.
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.107 [info] <0.183.0> Priority queues enabled, real BQ is rabbit_variable_queue
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.141 [info] <0.364.0> Starting rabbit_node_monitor
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.178 [info] <0.183.0> message_store upgrades: 1 to apply
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.178 [info] <0.183.0> message_store upgrades: Applying rabbit_variable_queue:move_messages_to_vhost_store
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.178 [info] <0.183.0> message_store upgrades: No durable queues found. Skipping message store migration
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.178 [info] <0.183.0> message_store upgrades: Removing the old message store data
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.187 [info] <0.183.0> message_store upgrades: All upgrades applied successfully
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.245 [info] <0.183.0> Adding vhost '/'
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.414 [info] <0.398.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@1758dd8ded5d/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.447 [info] <0.398.0> Starting message stores for vhost '/'
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.448 [info] <0.402.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.461 [info] <0.398.0> Started message store of type transient for vhost '/'
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.462 [info] <0.405.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.469 [warning] <0.405.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.476 [info] <0.398.0> Started message store of type persistent for vhost '/'
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.481 [info] <0.183.0> Creating user 'guest'
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.502 [info] <0.183.0> Setting user tags for user 'guest' to [administrator]
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.527 [info] <0.183.0> Setting permissions for 'guest' in '/' to '.*', '.*', '.*'
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.554 [info] <0.443.0> started TCP Listener on [::]:5672
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.578 [info] <0.183.0> Setting up a table for connection tracking on this node: tracked_connection_on_node_rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.606 [info] <0.183.0> Setting up a table for per-vhost connection counting on this node: tracked_connection_per_vhost_on_node_rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:56.607 [info] <0.33.0> Application rabbit started on node rabbit@1758dd8ded5d
+[33mrabbitmq_1  |[0m  completed with 0 plugins.
+[33mrabbitmq_1  |[0m 2018-02-19 23:36:57.199 [info] <0.5.0> Server startup complete; 0 plugins started.
+[33mrabbitmq_1  |[0m 2018-02-19 23:37:08.381 [info] <0.455.0> accepting AMQP connection <0.455.0> (172.18.0.4:42680 -> 172.18.0.3:5672)
+[33mrabbitmq_1  |[0m 2018-02-19 23:37:08.408 [info] <0.455.0> connection <0.455.0> (172.18.0.4:42680 -> 172.18.0.3:5672): user 'guest' authenticated and granted access to vhost '/'
+[33mrabbitmq_1  |[0m 2018-02-19 23:37:11.392 [warning] <0.455.0> closing AMQP connection <0.455.0> (172.18.0.4:42680 -> 172.18.0.3:5672, vhost: '/', user: 'guest'):
+[33mrabbitmq_1  |[0m client unexpectedly closed TCP connection
+[32mstorage_receiver_1 exited with code 137
+[0m[33mstorage_rabbitmq_1 exited with code 137
+[0m[36mstorage_mongodb_1 exited with code 137
+[0m
