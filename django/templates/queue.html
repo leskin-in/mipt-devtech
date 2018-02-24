@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block body %}
+
+    <h2 style="margin: 2%">List #{{ qid }}</h2>
+
+    {% for note in notes %}
+        <div style="text-align: left; border: solid 1px #373737; background-color: #ffffff; margin: 1% 2%; padding: 1%;">
+            <h3 style="font-size: 120%; font-weight: bold; margin: 0; padding: 0;">{{ note.header }}</h3>
+            <p>
+                {{ note.body }}
+            </p>
+            <br>
+            <div style="font-size: 80%; text-align: right;">
+                Date: {{ note.date }}
+                <form action="{{ request.path }}" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="action_type" value="delete">
+                    <input type="hidden" name="qid" value="{{ qid }}">
+
+                    <input type="hidden" name="id" value="{{ note.id }}">
+
+                    <input type="submit" value="Delete note">
+                </form>
+            </div>
+        </div>
+    {% endfor %}
+
+    <br>
+    <hr>
+    <div style="font-size: 120%; text-align: center;">
+        <form action="{{ request.path }}" method="post" style="margin: 0% 2%">
+            {% csrf_token %}
+            <input type="hidden" name="action_type" value="add">
+            <input type="hidden" name="qid" value="{{ qid }}">
+
+            <label for="header">Header:</label>
+            <br>
+            <input type="text" name="header">
+            <br>
+            <label for="body">Note:</label>
+            <br>
+            <textarea name="body" style="width: 50%"></textarea>
+            <br>
+            <input type="submit" value="Add note to this list" style="margin: 0.5%">
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>iToDo-592</title>
+</head>
+
+<body style="background-color: #ffcfab; font-family: Helvetica, serif;">
+
+    <div style="text-align: center; font-size: 120%">
+        <form action="/list/" method="get">
+            <label for="qid">List #</label>
+            <input type="text" name="qid">
+            <input type="submit" value="Get the notes!">
+        </form>
+    </div>
+    <hr><br>
+
+    {% block body %}
+    <span style="text-align: center; font-size: 120%">
+        <p>
+            Welcome to iToDo-592! To create a new note note list, press the button above.
+        </p>
+        <p>
+            You may use your own ID: enter it in the field. Otherwise, an ID will be assigned automatically.
+        </p>
+    </span>
+    {% endblock %}
+
+</body>
+
+</html>
