@@ -1,0 +1,27 @@
+{
+  "name": "spa",
+  "version": "0.1.0",
+  "description": "A Django server with a simple ToDo-list app.",
+  "main": "index.js",
+  "dependencies": {
+    "webpack": "^3.11.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "build-release": "webpack --optimize-minimize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leskin-in/mipt-devtech.git"
+  },
+  "author": "Ivan Leskin",
+  "license": "MIT"
+}
