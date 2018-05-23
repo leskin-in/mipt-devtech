@@ -1,0 +1,6 @@
+  1           0 LOAD_NAME                0 (print)
+              3 LOAD_CONST               0 ('Hello world')
+              6 CALL_FUNCTION            1 (1 positional, 0 keyword pair)
+              9 POP_TOP
+             10 LOAD_CONST               1 (None)
+             13 RETURN_VALUE
